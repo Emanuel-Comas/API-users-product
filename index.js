@@ -1,11 +1,3 @@
-# API-users-product
-Emanuel Comas
-
-//Codigo index y consultas//
-
-//Codigo index
-
-
 import { createRequire } from 'node:module'
 import express from 'express'
 
@@ -206,61 +198,3 @@ app.use((req, res) => {
 app.listen(expossedPort, () => {
     console.log("Servidor escuchando en http://localhost: ", + expossedPort)
 })
-
-
-
-
-//Consultas
-
-### obtencion de todos los usuarios ###
-### /usuarios
-
-GET http://localhost:1234/usuarios
-
-
-### obtencion de 1 usuario por ID ###
-
-GET http://localhost:1234/usuarios/2
-
-
-### Creacion de usuario nuevo ###
-
-POST http://localhost:1234/usuarios
-Content-Type: application/json
-
-{
-    "id": 11,
-    "nombre": "Emanuel Comas",
-    "dni": "23434231244",
-    "genero": "M"
-}
-
-
-### Actualizado de usuario ###
-
-PATCH http://localhost:1234/usuarios/3
-Content-Type: application/json
-
-{
-    "email": "carlos12312@example.com"
-}
-
-### Borrado de un usuario ###
-DELETE http://localhost:1234/usuarios/8
-
-
-### Obtencion de precio de producto ###
-GET http://localhost:1234/productos/2
-
-
-### Obtencion del nombre de producto ###
-GET http://localhost:1234/productos/1/nombre
-
-### Obtencion del telefono segun ID ###
-GET http://localhost:1234/usuarios/1/Telefono
-
-### Obtencion del nombre de usuario segun ID ###
-GET http://localhost:1234/usuarios/1/nombre
-
-### Precio total ###
-GET http://localhost:1234/precio-total
